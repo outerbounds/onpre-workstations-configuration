@@ -1,0 +1,9 @@
+---
+all:
+  hosts:
+    # host1:
+    #   ansible_host: <host-ip/host-dns>
+    #   ansible_user: <ssh-username>
+    # host2:
+    #   ansible_host: <host-ip/host-dns>
+    #   ansible_user: <ssh-username>Yes

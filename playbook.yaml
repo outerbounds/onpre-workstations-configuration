@@ -1,0 +1,11 @@
+---
+- name: Install Docker and Configure PAM module for SSH
+  hosts: all
+  become: yes
+  roles:
+    - name: ansible-role-onprem-workstations
+      vars:
+        outerbounds_issuer: <the issuer URL> # This will be provided to you by Outerbounds
+        outerbounds_audience: <the expected jwt audience> # This will be provided to you by Outerbounds  
+    - name: nvidia_driver
+    - name: nvidia_docker

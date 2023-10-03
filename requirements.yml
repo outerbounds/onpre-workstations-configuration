@@ -1,0 +1,13 @@
+roles:
+  - name: ansible-role-onprem-workstations
+    src: https://github.com/outerbounds/ansible-role-onprem-workstations
+    scm: git
+    version: v0.1.0
+  - name: nvidia_driver
+    src: https://github.com/NVIDIA/ansible-role-nvidia-driver
+    version: v2.3.0
+    scm: git
+  - name: nvidia_docker
+    src: https://github.com/NVIDIA/ansible-role-nvidia-docker
+    version: v1.2.4
+    scm: git
