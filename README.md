@@ -39,3 +39,19 @@ To run/deploy Ansible in order to configure an on-premise machine follow these s
     $ # to deploy to a single target
     $ ansible-playbook -i inventory.yaml -l <target-name> playbook.yaml
     ```
+
+Troubleshooting
+===============
+
+1. If Ansible gets stuck on the "Gather Facts" step you can try to remove the cache by deleting the `~/.ansible/` folder and rerun the playbook. You may also need to reinstall the Ansible roles using `ansible-galaxy install -r requirements.yml --force`.
+
+2. If your local machine doesn't have nvidia drivers and would like them to be enabled as part of the same Ansible run, you and enable reboot by updating the `playbook.yaml` as shown below.
+    ```yaml
+    ...
+    - name: nvidia_driver
+      vars:
+        nvidia_driver_skip_reboot: no
+    ...
+    ```
+
+    **Note:** this variables is disabled in the playbook to avoid forcing a reboot.
