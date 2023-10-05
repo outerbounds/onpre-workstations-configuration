@@ -8,4 +8,6 @@
         outerbounds_issuer: <the issuer URL> # This will be provided to you by Outerbounds
         outerbounds_audience: <the expected jwt audience> # This will be provided to you by Outerbounds  
     - name: nvidia_driver
+      vars:
+        nvidia_driver_skip_reboot: yes
     - name: nvidia_docker
